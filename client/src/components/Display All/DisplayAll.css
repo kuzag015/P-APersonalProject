@@ -1,0 +1,27 @@
+.blogImage {
+    height: 100%;
+    width: 100%; 
+}
+
+.image-grid {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.blogControl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 25px;
+}
+
+
+.transparent {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.transparent:hover{
+    opacity: 0.3;
+}
