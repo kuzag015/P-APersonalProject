@@ -1,13 +1,15 @@
 .top{
     width: 100vw;
     height: 100px;
-    background-image: linear-gradient(to right, rgb(126, 143, 252), rgb(255, 219, 182));
+    background-image: linear-gradient(to right, rgb(97, 118, 255), rgb(255, 223, 192));
+    opacity: 1;
     position: sticky;
     top: 0;
     display: flex;
     align-items: center;
     color: antiquewhite;
-    font-family: 'Josefin Sans', sans-serif;;
+    font-family: 'Josefin Sans', sans-serif;
+    filter: drop-shadow(0px 3px 3px #6e6b99);
 }
 
 .topLeft, .topRight {

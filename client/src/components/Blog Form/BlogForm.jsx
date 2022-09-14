@@ -31,7 +31,7 @@ const BlogForm = () => {
         <div className="container">
             <div className="row ">
                 <div className="col-12">
-                    <h1>Write a Page</h1>
+                    <h1>Where have you been?</h1>
                 <form onSubmit={submitHandler}>
                     <div className="form-group">
                         <label htmlFor="title">Location</label>

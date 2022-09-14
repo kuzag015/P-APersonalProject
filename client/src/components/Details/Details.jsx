@@ -36,9 +36,6 @@ const Details = (props) => {
             })
     }, []);
 
-
-    
-
     const deleteHandler = (id) => {
         let is_sure = window.confirm("Are you sure you want to delete your post?");
         if (is_sure == true) {
@@ -63,23 +60,6 @@ const Details = (props) => {
 
     // commentHandler() is modeled after deleteHandler currently. Will change to commit comments upon submitting comment
 
-    const commentHandler = (id) => {
-        let is_sure = window.confirm("Are you sure you want to comment on your post?");
-        if (is_sure == true) {
-            axios.put(`http://localhost:8000/api/blog/${id}`)
-            .then((res) => {
-                setAllComments([...res.data.comment])
-            })
-            .catch((err)=> {
-                console.log(err)
-            })
-            .catch((err) => {
-            console.log("error commenting on post", err.response);
-            });  
-        } else {
-            return;
-        }
-    };
 
 return (
     <div className="detailsContainer">
@@ -101,20 +81,6 @@ return (
             </Link>
             <span> </span>
             <button onClick={() => {deleteHandler(id)}} className="btn btn-outline-light">Delete Post</button>
-        </div>
-        <div className="row ">
-            <div className="col-12">
-                <form onSubmit={commentHandler}>
-                    <div className="form-group centered">
-                        <button type='submit' className="btn btn-outline-light position">Leave a Comment</button>
-                        <textArea
-                            className="form-control"
-                            onChange={(e) => setComment(e.target.value)}
-                            value={comment}
-                        />
-                    </div>
-                </form>
-            </div>
         </div>
     </div>
 )}   

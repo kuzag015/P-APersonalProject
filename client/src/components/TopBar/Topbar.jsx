@@ -18,17 +18,24 @@ const Topbar = () => {
 
   return (
     <div className="top">
-        <div className="topLeft">Picture Book</div>
+        <div onClick={()=>{
+          if(window.confirm("looking for a children's book?")){
+            navigate(window.location.href = "http://www.childrenslibrary.org/library/books.html")
+          }}}
+        className="topLeft">Picture Book</div>
         <div className="topCenter">
             <ul className="listItems">
                 <li className="listItem"><Link to="/home">Home</Link></li>
                 <li className="listItem"><Link to="/new">New Post</Link></li>
                 <li className="listItem"><Link to="/all">See All Posts</Link></li>
+                <li className="listItem"><Link to="/">Log Out</Link></li>
             </ul>
         </div>
         <div className="topRight">
             <img onClick={()=>{
-              navigate(window.location.href = "https://www.gutenberg.org/")}} className="thumbnail" src="https://cdn-icons-png.flaticon.com/512/10/10742.png" alt=""/>
+              if(window.confirm("Or one for an adult?")){
+                navigate(window.location.href = "https://www.gutenberg.org/")
+              }}} className="thumbnail" src="https://cdn-icons-png.flaticon.com/512/10/10742.png" alt=""/>
         </div>
     </div>
   )

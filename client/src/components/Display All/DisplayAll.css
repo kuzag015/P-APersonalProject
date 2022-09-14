@@ -7,6 +7,7 @@
     display: grid;
     gap: 0.5rem;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    background-color: antiquewhite;
 }
 
 .blogControl {
@@ -22,6 +23,11 @@
     transition: 0.3s;
 }
 
-.transparent:hover{
-    opacity: 0.3;
+.transparent:hover {
+    opacity: 0.5;
+
+}
+
+.tempTitle {
+    display: none;
 }

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import "./Login.css";
+import axios from "axios";
 
 const Login = () => {
 
@@ -8,9 +9,10 @@ const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [confirmPassword, setConfirmPassword] = useState("");
 const [errors, setErrors] = useState("");
-const [isActive, setIsActive] = useState("");
+const [isActive, setIsActive] = useState(false);
 const [firstName, setFirstName] = useState("");
 const [lastName, setLastName] = useState("");
+const [success, setSuccess] = useState();
 
 const loginHandler = (e) => {
     e.preventDefault();
@@ -18,13 +20,25 @@ const loginHandler = (e) => {
 };
 
 const regHandler = (e) => {
-    e.preventDefault();
+    axios.post(
+            "http://localhost:8000/api/Register",
+            JSON.stringify({user: password}),
+            setIsActive(true),
+            {
+                headers: {"Content-Type" : "application/json"},
+                withCredentials: true,
+            }
+        ).then(
+            setSuccess(true)
+        )
 
-};
+}
+
 
 return (
 <div className="container">
     <h1 className="homeTitle">Welcome to Picture Book</h1>
+    <h5>Finally a place to post photos you find on the internet, alongside cheeky descriptions</h5>
         <div className="container2">
             <div className="loginReg">
                 <div className="row border">

@@ -10,6 +10,7 @@ const Edit = (props) => {
     const [image, setImage] = useState("");
     const [postId, setPostId] = useState("")
     const [errors, setErrors] = useState([])
+    const [comment, setComment] = useState('')
 
     const navigate = useNavigate();
 
@@ -28,7 +29,7 @@ const Edit = (props) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:8000/api/blog/${id}`, {title, description, image})
+        axios.put(`http://localhost:8000/api/blog/${id}`, {title, description, image, comment})
             .then((res) => {
                 console.log(res);
                 navigate('/all')

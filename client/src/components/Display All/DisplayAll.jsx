@@ -26,7 +26,8 @@ const DisplayAll = () => {
                 allPosts.map((post)=>{
                     return(
                                 <Link to={`/details/${post._id}`}>
-                                    <img className="blogImage transparent" src={post.image}/>   
+                                    <img className="blogImage transparent" src={post.image}/>
+                                    <div className="tempTitle">{post.title}</div>   
                                       {/* Tried using FileReader() to read local image address from user form " */}
                                 </Link>             
                     )

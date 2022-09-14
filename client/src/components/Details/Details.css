@@ -3,13 +3,14 @@
 .blogImage {
     height: 50%;
     width: 50%; 
+    border-radius: .5rem;
 
 }
 
 .blogImageDetail {
     height: 400px;
     width: auto;
-    border-radius: 3%;
+    border-radius:.5rem;
     border: solid antiquewhite 3px;
 
 

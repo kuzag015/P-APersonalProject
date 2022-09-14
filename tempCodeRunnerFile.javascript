@@ -1,35 +1,30 @@
-// // dont worry, be happy!
-// const beCheerful = (message, num) => {
-//     for(i=0; i<=num; i++){
-//         console.log(message)
-//     }
+// let i = 2000
+// while(i<5281){
+//     console.log(i);
+//     i++
 // }
 
-// beCheerful("Good Morning!", 99)
-
-
-// // multiples of 3
-
-// const multiplesOfThreeButNotAll = () => {
-//     for(i=-300; i<=0; i+=3){
-//         if(i==-3 || i==-6){
-//             break;
-//         }else{
-//             console.log(i)
+// const happyBirthday = () => {
+    
+//     let birthMonthDay = 69
+//     let birthDayMonth = 96
+    
+//     for(i=0; i<100; i++){
+//         if(i==birthDayMonth){
+//             console.log("How did you know?");
+//         } else if (i==birthMonthDay){
+//             console.log("How did you know?");
+//         } else {
+//             console.log("just another day")
 //         }
 //     }
 // }
 
-// multiplesOfThreeButNotAll()
+// happyBirthday()
 
-const printingIngegersWithWhile = () => {
-    let i = 2000;
-    while(i<5281) {
-        break
-        console.log(i);
-        i++
-    }
+let i = 0;
+
+while(i<60000 && i%6==0){
+    console.log(i)
+    i++
 }
-
-
-printingIngegersWithWhile();
